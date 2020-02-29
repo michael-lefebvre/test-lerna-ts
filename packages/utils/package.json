@@ -1,6 +1,6 @@
 {
   "name": "@michael-lefebvre/utils",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Cross packages toolbox",
   "author": "Michael Lefebvre <michael@scenedata.com>",
   "homepage": "https://github.com/michael-lefebvre/test-lerna-ts#readme",
