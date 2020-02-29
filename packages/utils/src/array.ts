@@ -33,3 +33,22 @@ export function findLast<T>(a: T[]): T | undefined {
   const length = !Array.isArray(a) ? 0 : a.length;
   return length ? a[length - 1] : undefined;
 }
+
+export function arrayMove<T>(a: T[], from: number, to: number): T[] {
+  const next = [...a];
+  const startIndex = to < 0 ? next.length + to : to;
+  const item = next.splice(from, 1)[0];
+  next.splice(startIndex, 0, item);
+  return next;
+}
+
+export function arraysMatch<T>(
+  a: ReadonlyArray<T>,
+  b: ReadonlyArray<T>,
+): boolean {
+  // Check if the arrays are the same length
+  if (a.length !== b.length) return false;
+
+  // Check if all items exist and are in the same order
+  return a.every((value, index) => value === b[index]);
+}
