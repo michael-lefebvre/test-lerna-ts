@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": false,
+    "noEmit": true,
+    "strict": true,
+    "jsx": "react",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "@michael-lefebvre/*": ["packages/*/src"],
+      "*": ["node_modules", "packages"]
+    }
+  },
+  "include": ["packages"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@michael-lefebvre/utils",
+  "version": "0.0.0",
+  "description": "Cross packages toolbox",
+  "author": "Michael Lefebvre <michael@scenedata.com>",
+  "homepage": "https://github.com/michael-lefebvre/test-lerna-ts#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://michael-lefebvre@github.com/michael-lefebvre/test-lerna-ts.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:declaration": "tsc --project tsconfig.build.json",
+    "build:es": "BABEL_ENV=build babel src --root-mode upward --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --no-comments",
+    "test": "jest --runInBand --verbose --detectOpenHandles"
+  },
+  "bugs": {
+    "url": "https://github.com/michael-lefebvre/test-lerna-ts/issues"
+  }
+}
