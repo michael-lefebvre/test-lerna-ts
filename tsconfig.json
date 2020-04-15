@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "noEmit": true,
     "strict": true,
     "jsx": "react",
